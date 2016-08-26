@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ObjetoTransferencia.Treinamento>
+@{
+    ViewBag.Title = "Treinamento";
+}
+
+<script>
+    function voltar()
+    {
+       
+
+        window.location.href = "@Url.Action("Index", "Aluno")";
+
+    }
+
+</script>
+
+
+<ul data-role="listview" data-inset="true" data-divider-theme="d">
+
+
+    <li data-role="list-divider"> Meu Treino</li>
+    @foreach (var treino in Model)
+    {
+    <li>@Html.ActionLink(treino.TipoTreinamento.Descricao, "Exercicios", "Exercicio", new { @codigo = treino.IDTreinamento, @treino = treino.TipoTreinamento.Descricao }, null)</li>
+    }
+
+  
+  
+</ul>
+
+    <div data-role="main" class="ui-content">
+        <button id="btnVoltar" value="Voltar" data-theme="a" data-icon="back" class="ui-btn" onclick="voltar()"> Voltar</button>       
+    </div>
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+﻿@model ObjetoTransferencia.Noticia
+@{
+    ViewBag.Title = "Notícia";
+}
+
+<script>
+    function voltar()
+    {
+        window.location.href = "@Url.Action("Noticias", "Home")";
+    }
+</script>
+
+<div>
+<h2>@ViewBag.Titulo</h2>
+<em>@Model.DataNoticia</em>
+</div>
+<hr />
+<div>
+    <p>
+    @Model.Descricao 
+    </p>
+</div>
+
+<div data-role="main" class="ui-content">
+    <button data-theme="a" data-icon="back" onclick="voltar()">Voltar</button>
+</div>
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+}

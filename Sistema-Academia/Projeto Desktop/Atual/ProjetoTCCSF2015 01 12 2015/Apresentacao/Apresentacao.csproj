@@ -1,0 +1,1160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E573C244-5228-400D-AD2F-D7E2BD02CF2B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Apresentacao</RootNamespace>
+    <AssemblyName>Apresentacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcaoNaTela.cs" />
+    <Compile Include="EquipamentoInterfaces\FrmEquipamentoCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipamentoInterfaces\FrmEquipamentoCadastrar.Designer.cs">
+      <DependentUpon>FrmEquipamentoCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquipamentoInterfaces\FrmEquipamentoSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipamentoInterfaces\FrmEquipamentoSelecionar.Designer.cs">
+      <DependentUpon>FrmEquipamentoSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExercicioInterfaces\FrmExercicioCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExercicioInterfaces\FrmExercicioCadastrar.Designer.cs">
+      <DependentUpon>FrmExercicioCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExercicioInterfaces\FrmExercicioSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExercicioInterfaces\FrmExercicioSelecionar.Designer.cs">
+      <DependentUpon>FrmExercicioSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExercicioInterfaces\FrmTipoExercicioCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExercicioInterfaces\FrmTipoExercicioCadastrar.Designer.cs">
+      <DependentUpon>FrmTipoExercicioCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExercicioInterfaces\FrmTipoExercicioSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExercicioInterfaces\FrmTipoExercicioSelecionar.Designer.cs">
+      <DependentUpon>FrmTipoExercicioSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmMedidaCorporalAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmMedidaCorporalAlterar.Designer.cs">
+      <DependentUpon>FrmMedidaCorporalAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmMedidaCorporalCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmMedidaCorporalCadastrar.Designer.cs">
+      <DependentUpon>FrmMedidaCorporalCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmMedidaCorporalSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmMedidaCorporalSelecionar.Designer.cs">
+      <DependentUpon>FrmMedidaCorporalSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmTipoMedidaCorporalCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmTipoMedidaCorporalCadastrar.Designer.cs">
+      <DependentUpon>FrmTipoMedidaCorporalCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmTipoMedidaCorporalSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\FrmTipoMedidaCorporalSelecionar.Designer.cs">
+      <DependentUpon>FrmTipoMedidaCorporalSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\Relatório\FrmFiltroRelatorioAvaliacaoFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\Relatório\FrmFiltroRelatorioAvaliacaoFisica.Designer.cs">
+      <DependentUpon>FrmFiltroRelatorioAvaliacaoFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\Relatório\FrmRelatorioAvalicaoFisica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedidaCorporalInterfaces\Relatório\FrmRelatorioAvalicaoFisica.Designer.cs">
+      <DependentUpon>FrmRelatorioAvalicaoFisica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuInterfaces\FrmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuInterfaces\FrmMenuPrincipal.Designer.cs">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuInterfaces\FrmMenuSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuInterfaces\FrmMenuSplash.Designer.cs">
+      <DependentUpon>FrmMenuSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticiaInterfaces\FrmNoticiaCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticiaInterfaces\FrmNoticiaCadastrar.Designer.cs">
+      <DependentUpon>FrmNoticiaCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticiaInterfaces\FrmNoticiaSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticiaInterfaces\FrmNoticiaSelecionar.Designer.cs">
+      <DependentUpon>FrmNoticiaSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjetivoInterfaces\FrmObjetivoCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjetivoInterfaces\FrmObjetivoCadastrar.Designer.cs">
+      <DependentUpon>FrmObjetivoCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjetivoInterfaces\FrmObjetivoSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjetivoInterfaces\FrmObjetivoSelecionar.Designer.cs">
+      <DependentUpon>FrmObjetivoSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Relatórios\FrmRelatorioAllAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\FrmRelatorioAllAluno.Designer.cs">
+      <DependentUpon>FrmRelatorioAllAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relatórios\FrmRelatorioEquipamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatórios\FrmRelatorioEquipamento.Designer.cs">
+      <DependentUpon>FrmRelatorioEquipamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TCCSF2015DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCCSF2015DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TCCSF2015DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCCSF2015DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TCCSF2015DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCCSF2015DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TCCSF2015DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCCSF2015DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TCCSF2015DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCCSF2015DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TCCSF2015DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCCSF2015DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TCCSF2015PC1DataSet1.cs">
+      <DependentUpon>TCCSF2015PC1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TCCSF2015PC1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TCCSF2015PC1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\FrmTreinamentoAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\FrmTreinamentoAlterar.Designer.cs">
+      <DependentUpon>FrmTreinamentoAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\FrmTreinamentoCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\FrmTreinamentoCadastrar.Designer.cs">
+      <DependentUpon>FrmTreinamentoCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\FrmTreinamentoSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\FrmTreinamentoSelecionar.Designer.cs">
+      <DependentUpon>FrmTreinamentoSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\TipoTreinamentoInterfaces\FrmTipoTreinamentoSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\TipoTreinamentoInterfaces\FrmTipoTreinamentoSelecionar.Designer.cs">
+      <DependentUpon>FrmTipoTreinamentoSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\TipoTreinamentoInterfaces\FrmTipoTreinamentoCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreinamentoInterfaces\TipoTreinamentoInterfaces\FrmTipoTreinamentoCadastrar.Designer.cs">
+      <DependentUpon>FrmTipoTreinamentoCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuário Interfaces\FrmTipoUsuarioCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuário Interfaces\FrmTipoUsuarioCadastrar.Designer.cs">
+      <DependentUpon>FrmTipoUsuarioCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuário Interfaces\FrmTipoUsuarioSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuário Interfaces\FrmTipoUsuarioSelecionar.Designer.cs">
+      <DependentUpon>FrmTipoUsuarioSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuário Interfaces\FrmUsuarioCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuário Interfaces\FrmUsuarioCadastrar.Designer.cs">
+      <DependentUpon>FrmUsuarioCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuário Interfaces\FrmUsuarioSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno Interfaces\FrmAlunoCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno Interfaces\FrmAlunoCadastrar.Designer.cs">
+      <DependentUpon>FrmAlunoCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Aluno Interfaces\FrmAlunoSelecionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aluno Interfaces\FrmAlunoSelecionar.Designer.cs">
+      <DependentUpon>FrmAlunoSelecionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidacaoInterfaces.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{55da580a-f1ba-4f13-8291-ead650f95104}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjetoTransferencia\ObjetoTransferencia.csproj">
+      <Project>{0a1575d2-f918-4cf0-b9a1-8de591d55b41}</Project>
+      <Name>ObjetoTransferencia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EquipamentoInterfaces\FrmEquipamentoCadastrar.resx">
+      <DependentUpon>FrmEquipamentoCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquipamentoInterfaces\FrmEquipamentoSelecionar.resx">
+      <DependentUpon>FrmEquipamentoSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExercicioInterfaces\FrmExercicioCadastrar.resx">
+      <DependentUpon>FrmExercicioCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExercicioInterfaces\FrmExercicioSelecionar.resx">
+      <DependentUpon>FrmExercicioSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExercicioInterfaces\FrmTipoExercicioCadastrar.resx">
+      <DependentUpon>FrmTipoExercicioCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExercicioInterfaces\FrmTipoExercicioSelecionar.resx">
+      <DependentUpon>FrmTipoExercicioSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedidaCorporalInterfaces\FrmMedidaCorporalAlterar.resx">
+      <DependentUpon>FrmMedidaCorporalAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedidaCorporalInterfaces\FrmMedidaCorporalCadastrar.resx">
+      <DependentUpon>FrmMedidaCorporalCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedidaCorporalInterfaces\FrmMedidaCorporalSelecionar.resx">
+      <DependentUpon>FrmMedidaCorporalSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedidaCorporalInterfaces\FrmTipoMedidaCorporalCadastrar.resx">
+      <DependentUpon>FrmTipoMedidaCorporalCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedidaCorporalInterfaces\FrmTipoMedidaCorporalSelecionar.resx">
+      <DependentUpon>FrmTipoMedidaCorporalSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedidaCorporalInterfaces\Relatório\FrmFiltroRelatorioAvaliacaoFisica.resx">
+      <DependentUpon>FrmFiltroRelatorioAvaliacaoFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedidaCorporalInterfaces\Relatório\FrmRelatorioAvalicaoFisica.resx">
+      <DependentUpon>FrmRelatorioAvalicaoFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedidaCorporalInterfaces\Relatório\RepRelatorioAvalicaoFisica.rdlc" />
+    <EmbeddedResource Include="MenuInterfaces\FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuInterfaces\FrmMenuSplash.resx">
+      <DependentUpon>FrmMenuSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticiaInterfaces\FrmNoticiaCadastrar.resx">
+      <DependentUpon>FrmNoticiaCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticiaInterfaces\FrmNoticiaSelecionar.resx">
+      <DependentUpon>FrmNoticiaSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjetivoInterfaces\FrmObjetivoCadastrar.resx">
+      <DependentUpon>FrmObjetivoCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjetivoInterfaces\FrmObjetivoSelecionar.resx">
+      <DependentUpon>FrmObjetivoSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\FrmRelatorioAllAluno.resx">
+      <DependentUpon>FrmRelatorioAllAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\FrmRelatorioEquipamento.resx">
+      <DependentUpon>FrmRelatorioEquipamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatórios\Report1.rdlc" />
+    <EmbeddedResource Include="Relatórios\Report2.rdlc" />
+    <EmbeddedResource Include="Relatórios\repRelatorioAluno.rdlc" />
+    <EmbeddedResource Include="Relatórios\repRelatorioEquipamentoDELL.rdlc" />
+    <EmbeddedResource Include="Relatórios\repRelatorioEquipamentoPOSITIVO.rdlc" />
+    <EmbeddedResource Include="TreinamentoInterfaces\FrmTreinamentoAlterar.resx">
+      <DependentUpon>FrmTreinamentoAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreinamentoInterfaces\FrmTreinamentoCadastrar.resx">
+      <DependentUpon>FrmTreinamentoCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreinamentoInterfaces\FrmTreinamentoSelecionar.resx">
+      <DependentUpon>FrmTreinamentoSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreinamentoInterfaces\TipoTreinamentoInterfaces\FrmTipoTreinamentoSelecionar.resx">
+      <DependentUpon>FrmTipoTreinamentoSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreinamentoInterfaces\TipoTreinamentoInterfaces\FrmTipoTreinamentoCadastrar.resx">
+      <DependentUpon>FrmTipoTreinamentoCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuário Interfaces\FrmTipoUsuarioCadastrar.resx">
+      <DependentUpon>FrmTipoUsuarioCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuário Interfaces\FrmTipoUsuarioSelecionar.resx">
+      <DependentUpon>FrmTipoUsuarioSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuário Interfaces\FrmUsuarioCadastrar.resx">
+      <DependentUpon>FrmUsuarioCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuário Interfaces\FrmUsuarioSelecionar.resx">
+      <DependentUpon>FrmUsuarioSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno Interfaces\FrmAlunoCadastrar.resx">
+      <DependentUpon>FrmAlunoCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aluno Interfaces\FrmAlunoSelecionar.resx">
+      <DependentUpon>FrmAlunoSelecionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\ic_pageview_black_18dp %282%29.png" />
+    <None Include="TCCSF2015DataSet.xsc">
+      <DependentUpon>TCCSF2015DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCCSF2015DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TCCSF2015DataSet.xss">
+      <DependentUpon>TCCSF2015DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet1.xsc">
+      <DependentUpon>TCCSF2015DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCCSF2015DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TCCSF2015DataSet1.xss">
+      <DependentUpon>TCCSF2015DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet2.xsc">
+      <DependentUpon>TCCSF2015DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCCSF2015DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TCCSF2015DataSet2.xss">
+      <DependentUpon>TCCSF2015DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet3.xsc">
+      <DependentUpon>TCCSF2015DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCCSF2015DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TCCSF2015DataSet3.xss">
+      <DependentUpon>TCCSF2015DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet4.xsc">
+      <DependentUpon>TCCSF2015DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCCSF2015DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TCCSF2015DataSet4.xss">
+      <DependentUpon>TCCSF2015DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet5.xsc">
+      <DependentUpon>TCCSF2015DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCCSF2015DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TCCSF2015DataSet5.xss">
+      <DependentUpon>TCCSF2015DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015PC1DataSet1.xsc">
+      <DependentUpon>TCCSF2015PC1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TCCSF2015PC1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TCCSF2015PC1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TCCSF2015PC1DataSet1.xss">
+      <DependentUpon>TCCSF2015PC1DataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_person_add_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_pageview_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_border_color_black_48dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_assignment_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_account_box_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_account_child_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_assignment_ind_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_assessment_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_assignment_ind_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_account_box_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_account_child_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_assessment_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Papéis-de-parede-de-Super-Heróis-5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_318-30582.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_23-2147494938.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_5_dicas_rapidas_de_musculacao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50-Free-Fitness-and-Sports-Elements-in-Vector-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aula_7_icon_1407241418.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aula_7_icon_14072414181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_5_dicas_rapidas_de_musculacao1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_5_dicas_rapidas_de_musculacao_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50-Free-Fitness-and-Sports-Elements-in-Vector-4 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_share_black_36dp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_whatshot_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_person_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_person_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_sort_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_person_outline_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_clear_all_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_share_black_36dp1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_share_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_account_child_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cached_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_person_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_person_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_person_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_trending_up_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_public_black_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_assignment_turned_in_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_assignment_turned_in_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_assignment_turned_in_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_add_box_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_add_box_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_add_box_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_add_box_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663012_add_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663015_add_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663018_add_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662901_add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662914_add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662901_add_user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662980_edit_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662891_edit_property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662828_edit_property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662887_edit_property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663068_edit_property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663403_add_property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663436_add_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663081_checked_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663087_checked_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user167 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user167 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user167 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user167 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user167 %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663087_checked_user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663119_advertising.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663113_advertising.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663116_advertising.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663116_advertising1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663119_advertising1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sports-Torso-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sports-Torso-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sports-Torso-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\column1 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\column1 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\column1 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muscular12 %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muscular12 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muscular12 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muscular12 %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\muscular12 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662692_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662689_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662689_search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662955_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662952_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662955_search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662952_search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662952_search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbells4 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbells4 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user167 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbells4 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user167 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663107_advertising.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_pageview_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_search_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_search_grey600_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_pageview_black_36dp %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_search_grey600_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_search_grey600_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_search_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662689_search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662689_search3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662689_search4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662664_folder-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662658_folder-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662662_folder-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1349803667_445021399_1-fotos-de-fabrica-de-aparelhos-para-academia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1349803667_445021399_1-fotos-de-fabrica-de-aparelh %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734290_checked_checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734293_checked_checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735294_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734163_purchase_order.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735838_checkmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734290_checked_checkbox1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734287_checked_checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440665951_tape_measure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440737480_exercise_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440737483_exercise_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663454_weightlift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440736652_moderator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440733849_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440733852_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440736673_moderator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663457_weightlift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663113_advertising1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663107_advertising1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734260_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734266_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663457_weightlift1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663454_weightlift1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663454_weightlift2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735286_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735835_checkmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440733852_user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663110_advertising.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440665954_tape_measure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440665951_tape_measure1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440733849_user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440736637_moderator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663454_weightlift3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663110_advertising1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663107_advertising2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440665948_tape_measure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662689_search5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662955_search2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662952_search3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440662955_search3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\08.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\082.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\083.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735858_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663042_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440950720_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440733816_trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735865_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735861_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735681_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735935_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735927_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735927_save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440736694_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735931_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03-papel-de-parede-academia %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weightlifting-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\news-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weightlifting-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440737483_exercise_3D1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1441094476_checkmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440737490_exercise_3D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440737483_exercise_3D2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Other-Tasks-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1441094572_paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50-Free-Fitness-and-Sports-Elements-in-Vector-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1441094510_approval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735286_ok1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Other-Tasks-Metro-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1441094510_approval1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735931_save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440736764_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735675_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\06-magnify-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign-Select-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer-Hardware-System-Information-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440665951_tape_measure2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440665954_tape_measure1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weightlifting-icon %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weightlifting-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weightlifting-icon %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weightlifting-icon %282%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734302_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734242_unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock-lock-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock-unlock-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_lock_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735681_delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734904_cllipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734898_cllipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663084_checked_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734891_cllipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734904_cllipboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734911_cllipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440663409_add_property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440735668_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440734281_checked_checkbox.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

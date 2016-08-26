@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Aluno";
+}
+
+<h2>Aluno</h2>
+
+
+<div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal">
+
+    <ul data-role="listview" data-theme="a" data-divider-theme="b">
+        <li data-icon="star" data-role="list-divider" data-theme="d">
+            Menu
+        </li>
+        <li data-filtertext="wai-aria voiceover accessibility screen reader">
+            @Html.ActionLink("Meu Treino", "Index", "Treinamento", new { @IDAluno = ViewBag.IDAluno }, null)
+        </li>
+        <li data-filtertext="accordions collapsible set collapsible-set collapsed">
+            @Html.ActionLink("Minhas Medidas", "Index", "MedidaCorporal", new { @IDAluno = ViewBag.IDAluno }, null)
+        </li>
+       
+    </ul>
+
+    <!-- panel content goes here -->
+</div><!-- /panel -->

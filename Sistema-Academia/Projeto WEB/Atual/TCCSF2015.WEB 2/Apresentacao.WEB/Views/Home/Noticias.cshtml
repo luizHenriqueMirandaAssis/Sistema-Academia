@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ObjetoTransferencia.Noticia>
+@{
+    ViewBag.Title = "Notícias";
+}
+
+<h2>Notícias</h2>
+
+<script>
+    function voltar()
+    {
+        window.location.href = "@Url.Action("Index", "Home")";
+    }
+</script>
+  
+    <ul data-role="listview" data-inset="true" data-divider-theme="d">
+    <li data-role="list-divider"> Títulos </li>
+    @foreach (var noticia in Model)
+    {
+    <li>@Html.ActionLink(noticia.Titulo, "MostrarNoticia", "Home", new { @idNoticia = noticia.IDNoticia }, null)</li>
+    } 
+  
+</ul>
+
+
+ <div data-role="main" class="ui-content">
+        <button data-theme="a" data-icon="back" onclick="voltar()"> Voltar </button>
+    </div>

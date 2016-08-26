@@ -1,0 +1,26 @@
+﻿@model ObjetoTransferencia.Aluno
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Home</h2>
+<hr />
+<hr />
+    <div data-role="main" data-position="left" data-position-fixed="false" data-display="reveal">
+
+    <ul data-role="listview" data-theme="a" data-divider-theme="b">
+        <li data-icon="star" data-role="list-divider" data-theme="d">
+            Menu
+        </li>
+        <li data-filtertext="wai-aria voiceover accessibility screen reader">
+            @Html.ActionLink("Aluno", "Index", "Aluno", new { @IDAluno = ViewBag.IDAluno }, null)
+        </li>
+        <li data-filtertext="wai-aria voiceover accessibility screen reader">
+            @Html.ActionLink("Notícias", "Noticias", "Home")
+        </li>
+
+    </ul>
+
+    <!-- panel content goes here -->
+</div><!-- /panel -->
+

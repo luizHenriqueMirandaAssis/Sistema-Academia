@@ -1,0 +1,32 @@
+﻿@model ObjetoTransferencia.Aluno
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Informe seu login e senha para entrar.</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    
+    <label>Login:</label>
+    @Html.TextBoxFor(c=> c.Pessoa.Usuario)
+    @Html.ValidationMessageFor(c => c.Pessoa.Usuario)
+    
+     <label>Senha:</label>
+    @Html.PasswordFor(c=> c.Pessoa.Senha)
+    @Html.ValidationMessageFor(c => c.Pessoa.Senha)
+    
+    <input type="submit" value="Entrar"/>
+    
+   if(TempData["Erro"] != null)
+    {
+        @TempData["Erro"]
+    }
+    
+    
+}
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+}

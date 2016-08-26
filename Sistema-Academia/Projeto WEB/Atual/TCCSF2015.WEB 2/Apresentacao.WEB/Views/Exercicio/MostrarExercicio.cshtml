@@ -1,0 +1,32 @@
+﻿@model ObjetoTransferencia.Exercicio
+@{
+    ViewBag.Title = "MostrarExercicio";
+}
+
+<h2> @ViewBag.ExercicioNome</h2>
+
+
+    <script>
+    function voltar()
+    {
+        window.location.href = "@Url.Action("Exercicios", "Exercicio", new { @codigo = ViewBag.IDTreinamento, @treino = ViewBag.Treino }, null)";
+
+    }
+       
+
+    </script>
+
+<div data-role="content" data-theme="d">
+    <p>@Model.Descricao</p>
+
+
+    <img style="-webkit-user-select: none;" src="@ViewBag.Url@Model.DemonstracaoUrlImagem" width="300" height="300" />
+
+</div>
+
+
+<div  class="ui-content" data-theme="d">
+    <button id="btnVoltar" value="Voltar" data-theme="a" data-icon="back" class="ui-btn" onclick="voltar()"> Voltar</button>
+</div>
+
+

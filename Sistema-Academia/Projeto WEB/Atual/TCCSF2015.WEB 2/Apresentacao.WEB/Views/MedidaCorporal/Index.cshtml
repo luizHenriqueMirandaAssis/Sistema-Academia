@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ObjetoTransferencia.MedidaCorporal>
+@{
+    ViewBag.Title = "Medida Corporal";
+}
+
+<h2>Minhas Medidas</h2>
+
+<script>
+    function voltar()
+    {
+        window.location.href = "@Url.Action("Index", "Aluno")";
+    }
+</script>
+
+<div>
+    <ul data-role="listview" data-inset="true" data-theme="c">
+       
+            <li data-role="list-divider" data-theme="a"><h1> Data Medida: @ViewBag.DataMedida </h1></li>
+            @foreach (var medidas in Model)
+            {
+            <li> @medidas.TipoMedidaCorporal.Descricao: @medidas.MedidaCm Cm</li>
+            }
+    </ul>
+</div>
+
+<div data-role="main" class="ui-content">
+    <button  data-theme="a" data-icon="back" class="ui-btn" onclick="voltar()"> Voltar</button>
+</div>
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+
+}
+
+
+
+
